@@ -1,0 +1,201 @@
+body {
+  background: #2c2c2c;
+  overflow: hidden;
+}
+
+.mask {
+  position: absolute;
+  background: #2c2c2c;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.mask.rght {
+  animation: slideRight 1s both;
+  animation-delay: 2s;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 30% 100%, 70% 0);
+}
+.mask.lft {
+  animation: slideLeft 1s both;
+  animation-delay: 2s;
+  -webkit-clip-path: polygon(70% 0, 30% 100%, 0 100%, 0 0);
+}
+
+.path {
+  background: #2c2c2c;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.path h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 50;
+  color: white;
+}
+.path p {
+  font-size: 30px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 50;
+  color: white;
+}
+.path img {
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 50;
+  color: white;
+}
+.path .overlay {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 44, 44, 0.75);
+}
+.path.rght {
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 30% 100%, 70% 0);
+}
+.path.rght h1 {
+  animation: h1Right 3s both;
+  animation-delay: 3s;
+  bottom: 20%;
+  text-align: left;
+}
+.path.rght p {
+  animation: h1Right 4s both;
+  animation-delay: 3s;
+  bottom: 30%;
+  text-align: left;
+}
+.path.rght img {
+  animation: h1Right 3s both;
+  animation-delay: 3s;
+  bottom: 5%;
+  text-align: left;
+}
+.path.rght .img {
+  background-position: left;
+  right: 0;
+  background-image: url("../images/light-side.jpg");
+}
+.path.lft {
+  -webkit-clip-path: polygon(70% 0, 30% 100%, 0 100%, 0 0);
+}
+.path.lft h1 {
+  animation: h1Left 3s both;
+  animation-delay: 3s;
+  top: 20%;
+  text-align: right;
+}
+.path.lft p {
+  animation: h1Left 4s both;
+  animation-delay: 3s;
+  top: 30%;
+  text-align: right;
+}
+.path.lft img,
+.path.rght img {
+  padding: 10px;
+}
+.path.lft img {
+  animation: h1Left 4s both;
+  animation-delay: 3s;
+  top: 5%;
+  text-align: right;
+}
+.path.lft .img {
+  left: 0;
+  background-position: right;
+  background-image: url("../images/dark-side.jpg");
+}
+.path .img {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-size: cover;
+}
+
+.progress-bar {
+  animation: progress 1s both;
+  animation-delay: 0.5s;
+  z-index: 20;
+  background-color: #ef5038;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-vs {
+  animation: scale 1s both;
+  padding-top: 3px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  z-index: 30;
+  width: 40px;
+  margin-left: -20px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+  left: 50%;
+  background-color: #ef5038;
+  border-radius: 50%;
+  text-align: center;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes progress {
+  0% {
+    -webkit-clip-path: polygon(50.2% 50%, 50.2% 50%, 49.8% 50%, 49.8% 50%);
+  }
+  60% {
+    -webkit-clip-path: polygon(50.2% 0, 50.2% 100%, 49.8% 100%, 49.8% 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(70.2% 0, 30.2% 100%, 29.8% 100%, 69.8% 0%);
+  }
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -70%;
+  }
+}
+@-webkit-keyframes slideRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -70%;
+  }
+}
+@-webkit-keyframes h1Left {
+  0% {
+    left: 5%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+@-webkit-keyframes h1Right {
+  0% {
+    right: 5%;
+  }
+  100% {
+    right: 10%;
+  }
+}

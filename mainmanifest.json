@@ -1,0 +1,6 @@
+{
+	"app_name": "calc-plugin_workflow", 
+	"app_type": ".js", 
+	"url": "./calculateModule/", 
+	"version": "v 1.1"
+}

@@ -1,0 +1,93 @@
+body {
+  background-color: #000;
+}
+
+#loader {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+#loader div {
+	width: 5px;
+  height: 5px;
+	background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+}
+#d1 {
+    left: 20px;
+    -webkit-animation: animate 1s ease-in-out infinite;
+    -moz-animation: animate 1s ease-in-out infinite;
+    -ms-animation: animate 1s ease-in-out infinite;
+    -o-animation: animate 1s ease-in-out infinite;
+    animation: animate 1s ease-in-out infinite;
+}
+#d2 {
+    left: 10px;
+    -webkit-animation: animate 1s ease-in-out infinite -.2s;
+    -moz-animation: animate 1s ease-in-out infinite -.2s;
+    -ms-animation: animate 1s ease-in-out infinite -.2s;
+    -o-animation: animate 1s ease-in-out infinite -.2s;
+    animation: animate 1s ease-in-out infinite -.2s;
+}
+#d3 {
+    -webkit-animation: animate 1s ease-in-out infinite -.4s;
+    -moz-animation: animate 1s ease-in-out infinite -.4s;
+    -ms-animation: animate 1s ease-in-out infinite -.4s;
+    -o-animation: animate 1s ease-in-out infinite -.4s;
+    animation: animate 1s ease-in-out infinite -.4s;
+}
+#d4 {
+    left: -10px;
+    -webkit-animation: animate 1s ease-in-out infinite -.6s;
+    -moz-animation: animate 1s ease-in-out infinite -.6s;
+    -ms-animation: animate 1s ease-in-out infinite -.6s;
+    -o-animation: animate 1s ease-in-out infinite -.6s;
+    animation: animate 1s ease-in-out infinite -.6s;
+}
+#d5 {
+    left: -20px;
+    -webkit-animation: animate 1s ease-in-out infinite -.8s;
+    -moz-animation: animate 1s ease-in-out infinite -.8s;
+    -ms-animation: animate 1s ease-in-out infinite -.8s;
+    -o-animation: animate 1s ease-in-out infinite -.8s;
+    animation: animate 1s ease-in-out infinite -.8s;
+}
+
+@-webkit-keyframes animate {
+  0% { top:0; }
+  5% { top: -2px; }
+  10% { top:-10px; }
+  15% { top: -2px; }
+  20% { top:0; }
+  100% { top:0; }
+}
+
+@-moz-keyframes animate {
+  0% { top:0; }
+  5% { top: -2px; }
+  10% { top:-10px; }
+  15% { top: -2px; }
+  20% { top:0; }
+  100% { top:0; }
+}
+
+@-ms-keyframes animate {
+  0% { top:0; }
+  5% { top: -2px; }
+  10% { top:-10px; }
+  15% { top: -2px; }
+  20% { top:0; }
+  100% { top:0; }
+}
+
+@-o-keyframes animate {
+  0% { top:0; }
+  5% { top: -2px; }
+  10% { top:-10px; }
+  15% { top: -2px; }
+  20% { top:0; }
+  100% { top:0; }
+}
